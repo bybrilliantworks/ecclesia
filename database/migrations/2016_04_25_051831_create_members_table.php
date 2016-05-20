@@ -20,8 +20,13 @@ class CreateMembersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
-            $table->string('phone_number');
+            $table->string('mobile_number');
             $table->text('address');
+            $table->string('gender');
+            $table->string('marital_status');
+            $table->date('birthday');
+            $table->date('date_joined');
+            $table->string('certified_code');
             $table->timestamps();
             $table->softDeletes();
 
