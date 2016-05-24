@@ -17,7 +17,19 @@ class MemberController extends Controller
 
     public function index()
     {
+        
 
+    }
+    
+    public function create()
+    {
+        return view('members.create');
+    }
+    
+    
+    public function store()
+    {
+        
     }
 
 }
