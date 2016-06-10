@@ -10,18 +10,38 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
 
 
 Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('/dashboard', 'HomeController@index');
+
+
+    Route::get('/members', 'MemberController@index');
+
+    Route::get('/members/create', 'MemberController@create');
+
+    Route::post('/members', 'MemberController@store');
+
+    Route::get('/members/{id}', 'MemberController@show');
+
+
     
-    Route::get('members', 'MemberController@index');
-    
+});
+
+
+
+
+Route::group(['domain' => '{church}.localhost:8000'], function(){
+
+    Route::get('user/{id}', function($church, $id){
+        return "My Church and Me" . $church . $id;
+    });
 });

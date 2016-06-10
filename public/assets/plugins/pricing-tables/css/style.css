@@ -27,11 +27,11 @@ Main Components
 .cd-pricing-container {
   width: 90%;
   max-width: 1170px;
-  margin: 0 auto 4em auto;
+  margin: 4em auto;
 }
 @media only screen and (min-width: 768px) {
   .cd-pricing-container {
-    margin: 0 auto 6em auto;
+    margin: 6em auto;
   }
   .cd-pricing-container.cd-full-width {
     width: 100%;
@@ -108,7 +108,6 @@ Main Components
 
 .cd-pricing-list {
   margin: 2em 0 0;
-  padding: 0;
 }
 .cd-pricing-list > li {
   position: relative;
@@ -278,13 +277,13 @@ Main Components
   }
   .cd-secondary-theme .cd-pricing-wrapper > li {
     background: #3aa0d1;
-    background: -webkit-linear-gradient( bottom , #0BA0BB, #20BEDA);
-    background: linear-gradient(to top, #0BA0BB, #20BEDA);
+    background: -webkit-linear-gradient( bottom , #3aa0d1, #3ad2d1);
+    background: linear-gradient(to top, #3aa0d1, #3ad2d1);
   }
   .cd-secondary-theme .cd-popular .cd-pricing-wrapper > li {
     background: #22BAA0;
-    background: -webkit-linear-gradient( bottom , #1DA890, #32C6AD);
-    background: linear-gradient(to top, #1DA890, #32C6AD);
+    background: -webkit-linear-gradient( bottom , #22BAA0, #e99b68);
+    background: linear-gradient(to top, #22BAA0, #e99b68);
     box-shadow: none;
   }
   :nth-of-type(1) > .cd-pricing-wrapper > li::before {
@@ -410,10 +409,10 @@ Main Components
     color: #22BAA0;
   }
   .cd-secondary-theme .cd-currency, .cd-secondary-theme .cd-duration {
-    color: #0BA0BB;
+    color: #2e80a7;
   }
   .cd-secondary-theme .cd-popular .cd-currency, .cd-secondary-theme .cd-popular .cd-duration {
-    color: #1DA890;
+    color: #ba6453;
   }
 
   .cd-currency {
