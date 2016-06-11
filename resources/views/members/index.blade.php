@@ -37,8 +37,8 @@
                                     <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
                                         <th>Age</th>
                                         <th>Start date</th>
                                         <th>Salary</th>

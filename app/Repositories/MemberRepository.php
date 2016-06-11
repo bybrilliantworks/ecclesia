@@ -38,6 +38,7 @@ class MemberRepository
         $this->member->church_id = auth()->user()->church_id;
         $this->member->date_joined = $member['dateJoined'];
         $this->member->mobile_number = $member['mobile_number'];
+        $this->member->occupation = $member['occupation'];
         
         $this->member->save();
         

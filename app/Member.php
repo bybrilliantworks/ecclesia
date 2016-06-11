@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Scopes\ChurchScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Validator;
@@ -21,11 +22,21 @@ class Member extends Model
         'birthday' => 'required|date',
         'maritalStatus' => 'required|string',
         'dateJoined' => 'required|date',
-        'mobileNumber' => 'required|string'
+        'mobileNumber' => 'required|string',
+        'occupation' => 'required|string'
     ];
 
     public function validate(array $members)
     {
         return Validator::make($members, $this->rules);
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new ChurchScope);
+    }
+
+
 }

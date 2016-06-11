@@ -13,10 +13,15 @@ class AddColumnsToUsersTable extends Migration
     public function up()
     {
         //
-        Schema::table('users', function(Blueprint $table){
-            $table->string('first_name')->after('id');
-            $table->string('last_name')->after('first_name');
-        }); 
+//        Schema::table('users', function(Blueprint $table){
+//            $table->string('first_name')->after('id');
+//            $table->string('last_name')->after('first_name');
+//        });
+
+
+        Schema::table('members', function(Blueprint $table){
+            $table->string('occupation')->after('marital_status');
+        });
         
     }
 

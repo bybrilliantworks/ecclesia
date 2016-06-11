@@ -28,6 +28,10 @@
                             <h4 class="panel-title">Create a new member account</h4>
                         </div>
                         <div class="panel-body">
+                            @include('partials.errors')
+                            @include('partials.failure')
+                            @include('partials.success')
+                            @include('partials.info')
                             <form class="form form-horizontal" role="form" action="{{url('/members')}}" method="post">
                                 <div class="form-group">
                                     <label for="firstName" class="control-label col-sm-2">First Name</label>
@@ -50,7 +54,7 @@
                                 <div class="form-group">
                                     <label for="address" class="control-label col-sm-2">Address</label>
                                     <div class="col-sm-10">
-                                        <input type="address" class="form-control" id="address" name="address" placeholder="Address" required>
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -74,6 +78,13 @@
                                             <option value="married">Married</option>
                                             <option value="others">Others</option>
                                         </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="occupation" class="control-label col-sm-2">Occupation</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="occupation" id="occupation" class="form-control" placeholder="Occupation">
                                     </div>
                                 </div>
                                 <div class="form-group">
