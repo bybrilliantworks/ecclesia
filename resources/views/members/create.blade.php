@@ -33,46 +33,47 @@
                             @include('partials.success')
                             @include('partials.info')
                             <form class="form form-horizontal" role="form" action="{{url('/members')}}" method="post">
+                                {!! csrf_field() !!}
                                 <div class="form-group">
                                     <label for="firstName" class="control-label col-sm-2">First Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" value="{{old('firstName')}}" placeholder="First Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName" class="control-label col-sm-2">Last Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" value="{{old('lastName')}}" placeholder="Last Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="control-label col-sm-2">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                        <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="Email" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address" class="control-label col-sm-2">Address</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+                                        <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" placeholder="Address" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address" class="control-label col-sm-2">Birthday</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="address" name="address" placeholder="Birthday" required>
+                                        <input type="date" class="form-control" id="address" name="birthday" value="{{old('birthday')}}" placeholder="Birthday" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="mobileNumber" class="control-label col-sm-2">Mobile Number</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+                                        <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" value="{{old('mobileNumber')}}" placeholder="Mobile Number" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="maritalStatus" class="control-label col-sm-2">Marital Status</label>
                                     <div class="col-sm-10">
-                                        <select name="" id="maritalStatus" class="form-control">
+                                        <select name="maritalStatus" id="maritalStatus" class="form-control" required>
                                             <option value="">Select marital status</option>
                                             <option value="single">Single</option>
                                             <option value="married">Married</option>
@@ -80,17 +81,27 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="gender" class="control-label col-sm-2">Gender</label>
+                                    <div class="col-sm-10">
+                                        <select name="gender" id="gender" class="form-control" required>
+                                            <option value="">Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="occupation" class="control-label col-sm-2">Occupation</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="occupation" id="occupation" class="form-control" placeholder="Occupation">
+                                        <input type="text" name="occupation" id="occupation" class="form-control" value="{{old('occupation')}}" placeholder="Occupation" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="dateJoined" class="control-label col-sm-2">Date Joined</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" placeholder="Date joined" required>
+                                        <input type="date" name="dateJoined" class="form-control" placeholder="Date joined" value="{{old('dateJoined')}}" required>
 
                                     </div>
                                 </div>

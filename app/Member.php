@@ -15,12 +15,13 @@ class Member extends Model
     protected $dates = ['deleted_at'];
 
     private $rules = [
-        'firstName' => 'required|string',
+        'firstName' => 'required|string|',
         'lastName' => 'required|string',
-        'email' => 'required|string',
+        'email' => 'required|email|unique:members,email',
         'address' => 'required|string',
         'birthday' => 'required|date',
         'maritalStatus' => 'required|string',
+        'gender' => 'required|string',
         'dateJoined' => 'required|date',
         'mobileNumber' => 'required|string',
         'occupation' => 'required|string'

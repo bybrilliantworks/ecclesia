@@ -19,15 +19,14 @@ class MemberController extends Controller
         $this->middleware('auth');
         $this->memberRepository = $memberRepository;
         $this->member = new Member();
-
-
+    
     }
 
     public function index()
     {
         $members = $this->memberRepository->fetchAll();
 
-        return view('members.index', ['members' => $members]);
+        return view('members.index')->with(['members' => $members]);
 
     }
     
@@ -39,11 +38,13 @@ class MemberController extends Controller
     
     public function store(Request $request)
     {
+
         $validator = $this->member->validate($request->all());
 
         if ($validator->fails())
         {
-            return back()->withErrors($validator->errors())->withInputs();
+
+            return back()->withErrors($validator)->withInput();
         }
 
         $this->memberRepository->saveNew($request->all());
