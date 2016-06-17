@@ -103,6 +103,7 @@
             <div class="profile-menu-list">
                 <a href="{{url('dashboard')}}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
                 <a href="{{url('members')}}"><i class="fa fa-users"></i><span>Members</span></a>
+                <a href="{{url('members')}}"><i class="fa fa-group"></i><span>Groups</span></a>
 
             </div>
         </nav>
@@ -244,7 +245,9 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-list" role="menu">
                                     <li role="presentation"><a href="{{url('members/create')}}"><i class="fa fa-user"></i>Member</a></li>
-                                    <li role="presentation"><a href="{{url('projects/create')}}"><i class="fa fa-cubes"></i>Projects</a></li>
+                                    <li role="presentation"><a href="{{url('projects/create')}}"><i class="fa fa-cubes"></i>Project</a></li>
+                                    <li role="presentation"><a href="{{url('groups/create')}}"><i class="fa fa-group"></i>Group</a></li>
+                                    <li role="presentation"><a href="{{url('assets/create')}}"><i class="fa fa-cogs"></i>Asset</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -255,7 +258,6 @@
                                 <ul class="dropdown-menu dropdown-list" role="menu">
                                     <li role="presentation"><a href="{{url('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
                                     <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock screen</a></li>
                                     <li role="presentation"><a href="{{url('logout')}}"><i class="fa fa-sign-out m-r-xs"></i>Log out</a></li>
                                 </ul>
                             </li>

@@ -56,6 +56,13 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/attendance/store', 'AttendanceController@store');
 
+    Route::get('/groups', 'GroupController@index');
+
+    Route::post('/groups', 'GroupController@store');
+
+    Route::get('/groups/create', 'GroupController@create');
+
+
 
     
 });

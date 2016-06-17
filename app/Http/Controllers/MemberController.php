@@ -49,7 +49,7 @@ class MemberController extends Controller
 
         $this->memberRepository->saveNew($request->all());
 
-        return view('members')->with('success', "Member has been created");
+        return redirect('members')->with('success', "Member has been created");
     }
 
 }
