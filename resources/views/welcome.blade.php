@@ -78,26 +78,26 @@
     <div class="row features-list">
         <div class="col-sm-4 wow fadeInLeft" data-wow-duration="1.5s" data-wow-offset="10" data-wow-delay="0.5s">
             <div class="feature-icon">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-users"></i>
             </div>
-            <h2>Fully Responsive</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies</p>
+            <h2>Members and Attendance</h2>
+            <p>Seamlessly manage you attendance and members</p>
             <p><a class="btn btn-link" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-sm-4 wow fadeInLeft" data-wow-duration="1.5s" data-wow-offset="10" data-wow-delay="0.7s">
             <div class="feature-icon">
                 <i class="fa fa-lightbulb-o"></i>
             </div>
-            <h2>Creative Design</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies</p>
+            <h2>Assets and Products</h2>
+            <p>Keep track of church assets and products</p>
             <p><a class="btn btn-link" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-sm-4 wow fadeInLeft" data-wow-duration="1.5s" data-wow-offset="10" data-wow-delay="0.9s">
             <div class="feature-icon">
                 <i class="fa fa-support"></i>
             </div>
-            <h2>Free Support</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies</p>
+            <h2>Projects and Events</h2>
+            <p>Effectively create and plan events from start to finsh</p>
             <p><a class="btn btn-link" href="#" role="button">View details &raquo;</a></p>
         </div>
     </div>
@@ -138,10 +138,10 @@
                         </nav>
                         <div class="content-wrap">
                             <section class="content-current">
-                                <h1>Responsive Design</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p></section>
+                                <h1>Mobile First</h1>
+                                <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.<br>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p></section>
                             <section><p>
-                                <h1>Cross-browser Compatible</h1>
+                                <h1>Assets</h1>
                                 <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.<br>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p></section>
                             <section><p>
                                 <h1>Built With Bootstrap 3.3.4</h1>
@@ -402,7 +402,7 @@
 </div>
 <footer>
     <div class="container">
-        <p class="text-center no-s">2015 &copy; Modern by Steelcoders.</p>
+        <p class="text-center no-s">2015 &copy; Powered by Ecclesia.</p>
     </div>
 </footer>
 

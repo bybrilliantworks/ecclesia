@@ -33,6 +33,30 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/members/{id}', 'MemberController@show');
 
 
+    Route::get('/projects', 'ProjectController@index');
+
+    Route::get('/projects/create', 'ProjectController@create');
+
+    Route::post('/projects', 'ProjectController@store');
+
+
+    Route::get('/products', 'ProductController@index');
+
+    Route::get('/products/create', 'ProductController@create');
+
+    Route::post('/products', 'ProductController@store');
+
+
+    Route::get('/assets', 'AssetController@index');
+
+    Route::get('/assets/create', 'AssetController@create');
+
+    Route::post('/assets', 'AssetController@store');
+
+
+    Route::get('/attendance/store', 'AttendanceController@store');
+
+
     
 });
 
