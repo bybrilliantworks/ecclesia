@@ -17,6 +17,7 @@ class CreateGroupTable extends Migration
             $table->integer('church_id')->unsigned();
             $table->integer('hod')->unsigned();
             $table->foreign('church_id')->references('id')->on('churches')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('hod')->references('id')->on('members')->onUpdate('cascade')->onDelete('cascade');
         });
 
     }

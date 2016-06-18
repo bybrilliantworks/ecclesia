@@ -39,6 +39,7 @@
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th>Head</th>
+                                        <th>Email</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -47,6 +48,7 @@
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th>Head</th>
+                                        <th>Email</th>
                                         <th>Actions</th>
                                     </tr>
                                     </tfoot>
@@ -55,17 +57,9 @@
                                     @foreach($groups as $group)
                                         <tr>
                                             <td>{{$group->name}}</td>
-                                            <td>{{$group->name}}</td>
-                                            <td>{{$group->name}}</td>
                                             <td>{{$group->description}}</td>
-                                            <td>
-                                                @if($group->status == '')
-                                                    <span class="badge badge-danger">Not Certified</span>
-                                                @else
-                                                    <span class="badge badge-success">Certified</span>
-                                                @endif
-
-                                            </td>
+                                            <td>{{$group->hod}}</td>
+                                            <td>{{$group->email}}</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-xs btn-default">View</button>

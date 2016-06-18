@@ -16,7 +16,8 @@ class Group extends Model
 
     public $rules = [
         'name' => 'required|string',
-        'description' => 'required|string'
+        'description' => 'required|string',
+        'email' => 'email'
     ];
 
     public function validate($data)

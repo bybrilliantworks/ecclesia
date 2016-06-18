@@ -26,6 +26,7 @@ class GroupRepository
         $this->group->name = $group['name'];
         $this->group->church_id = auth()->user()->church_id;
         $this->group->description = $group['description'];
+        $this->group->email = $group['email'];
 
         $this->group->save();
 

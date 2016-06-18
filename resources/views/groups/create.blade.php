@@ -32,18 +32,25 @@
                             @include('partials.failure')
                             @include('partials.success')
                             @include('partials.info')
-                            <form class="form form-horizontal" role="form" action="{{url('/group')}}" method="post">
+                            <form class="form form-horizontal" role="form" action="{{url('/groups')}}" method="post">
                                 {!! csrf_field() !!}
                                 <div class="form-group">
-                                    <label for="firstName" class="control-label col-sm-2">Name</label>
+                                    <label for="name" class="control-label col-sm-2">Name</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" placeholder="Name of Group" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastName" class="control-label col-sm-2">Description</label>
+                                    <label for="description" class="control-label col-sm-2">Description</label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" name="description" id="description" cols="30" rows="5" placeholder="Description" required>{{old('description')}}</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="control-label col-sm-2">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="Group email address">
                                     </div>
                                 </div>
 
