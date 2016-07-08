@@ -1,11 +1,11 @@
 <?php
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+//$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+//
+//$host = $url["host"];
+//$username = $url["user"];
+//$password = $url["pass"];
+//$database = substr($url["path"], 1);
 
 return [
 
@@ -59,32 +59,32 @@ return [
             'prefix' => '',
         ],
 
-//        'mysql' => [
-//            'driver' => 'mysql',
-//            'host' => env('DB_HOST', 'localhost'),
-//            'port' => env('DB_PORT', '3306'),
-//            'database' => env('DB_DATABASE', 'ecclesia'),
-//            'username' => env('DB_USERNAME', 'root'),
-//            'password' => env('DB_PASSWORD', 'root'),
-//            'charset' => 'utf8',
-//            'collation' => 'utf8_unicode_ci',
-//            'prefix' => '',
-//            'strict' => false,
-//            'engine' => null,
-//        ],
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'ecclesia'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', 'root'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
 
         // live configuration
-      'mysql' => [
-            'driver'    => 'mysql',
-            'host'      => $host,
-            'database'  => $database,
-            'username'  => $username,
-            'password'  => $password,
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
-        ],
+//      'mysql' => [
+//            'driver'    => 'mysql',
+//            'host'      => $host,
+//            'database'  => $database,
+//            'username'  => $username,
+//            'password'  => $password,
+//            'charset'   => 'utf8',
+//            'collation' => 'utf8_unicode_ci',
+//            'prefix'    => '',
+//            'strict'    => false,
+//        ],
 
         'pgsql' => [
             'driver' => 'pgsql',
