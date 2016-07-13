@@ -33,7 +33,7 @@
                         <div class="panel-body">
 
                             <div class="table-responsive">
-                                <table id="example" class="display table" style="width: 100%; cellspacing: 0;">
+                                <table id="membersTable" class="display table" style="width: 100%; cellspacing: 0;">
                                     <thead>
                                     <tr>
                                         <th>Name</th>
@@ -116,6 +116,6 @@
     <script src="{{url('assets/plugins/x-editable/bootstrap3-editable/js/bootstrap-editable.js')}}"></script>
     <script src="{{url('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
     <script src="{{url('assets/js/modern.min.js')}}"></script>
-    <script src="{{url('assets/js/pages/table-data.js')}}"></script>
+    <script src="{{url('assets/js/pages/members.js')}}"></script>
 
 @endsection

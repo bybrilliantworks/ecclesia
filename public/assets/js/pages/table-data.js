@@ -89,6 +89,8 @@ $(document).ready(function() {
     // Datatables
     
     $('#example').dataTable();
+    
+    
     $('#example-editable').DataTable();
     
     var table = $('#example2').DataTable({

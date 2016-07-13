@@ -61,7 +61,11 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/groups', 'GroupController@store');
 
     Route::get('/groups/create', 'GroupController@create');
+    
 
+    Route::resource('/events', 'EventController');
+
+    Route::resource('/event_types', 'EventTypeController');
 
 
     
