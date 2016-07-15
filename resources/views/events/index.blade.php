@@ -69,15 +69,15 @@
 
                                             <td>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-xs btn-default">View</button>
+                                                    <a href="{{url('events/' . $event->id . '/attendance')}}" class="btn btn-xs btn-default">Attendance</a>
                                                     <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <span class="caret"></span>
                                                         <span class="sr-only">Toggle Dropdown</span>
                                                     </button>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="{{url('members/' . $event->id . '/edit')}}">Edit</a></li>
+                                                        <li><a href="{{url('events/' . $event->id . '/edit')}}">Edit</a></li>
                                                         <li role="separator" class="divider"></li>
-                                                        <li><a href="{{url('members/' . $event->id . '/delete')}}">Delete</a></li>
+                                                        <li><a href="{{url('events/' . $event->id . '/delete')}}">Delete</a></li>
                                                     </ul>
                                                 </div>
                                             </td>

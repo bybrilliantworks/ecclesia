@@ -16,8 +16,8 @@
                     <div class="panel info-box panel-white">
                         <div class="panel-body">
                             <div class="info-box-stats">
-                                <p class="counter">107,200</p>
-                                <span class="info-box-title">User activity this month</span>
+                                <p class="counter">502</p>
+                                <span class="info-box-title">New Members this month</span>
                             </div>
                             <div class="info-box-icon">
                                 <i class="icon-users"></i>
@@ -35,11 +35,11 @@
                     <div class="panel info-box panel-white">
                         <div class="panel-body">
                             <div class="info-box-stats">
-                                <p class="counter">340,230</p>
-                                <span class="info-box-title">Page views</span>
+                                <p class="counter">15</p>
+                                <span class="info-box-title">Events this month</span>
                             </div>
                             <div class="info-box-icon">
-                                <i class="icon-eye"></i>
+                                <i class="icon-calendar"></i>
                             </div>
                             <div class="info-box-progress">
                                 <div class="progress progress-xs progress-squared bs-n">
@@ -55,10 +55,10 @@
                         <div class="panel-body">
                             <div class="info-box-stats">
                                 <p>$<span class="counter">653,000</span></p>
-                                <span class="info-box-title">Monthly revenue goal</span>
+                                <span class="info-box-title">Total offering this month</span>
                             </div>
                             <div class="info-box-icon">
-                                <i class="icon-basket"></i>
+                                <i class="icon-money"></i>
                             </div>
                             <div class="info-box-progress">
                                 <div class="progress progress-xs progress-squared bs-n">
@@ -73,11 +73,11 @@
                     <div class="panel info-box panel-white">
                         <div class="panel-body">
                             <div class="info-box-stats">
-                                <p class="counter">47,500</p>
-                                <span class="info-box-title">New emails recieved</span>
+                                <p>$<span class="counter">15,000,000</span></p>
+                                <span class="info-box-title">Total tithe this month</span>
                             </div>
                             <div class="info-box-icon">
-                                <i class="icon-envelope"></i>
+                                <i class="icon-money"></i>
                             </div>
                             <div class="info-box-progress">
                                 <div class="progress progress-xs progress-squared bs-n">
@@ -96,7 +96,7 @@
                             <div class="col-sm-8">
                                 <div class="visitors-chart">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title">Visitors</h4>
+                                        <h4 class="panel-title">New members</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div id="flotchart1"></div>

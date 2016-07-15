@@ -39,4 +39,7 @@ class EventTypeController extends Controller
 
         return redirect('events')->with('success', 'Event Type Created');
     }
+
+
+
 }
