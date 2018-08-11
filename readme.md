@@ -1,2 +1,3 @@
-# cims
-Church Information Management System
+# Ecclessia
+A Church Information Management System
+
