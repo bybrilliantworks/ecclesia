@@ -1,11 +1,21 @@
 <?php
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+if ($url = env('CLEARDB_DATABASE_URL', false)) {
 
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+    $parts = parse_url($url);
+    $host = $parts["host"];
+    $username = $parts["user"];
+    $password = $parts["pass"];
+    $database = substr($parts["path"], 1);
+
+} else {
+
+    $host = env('DB_HOST', '127.0.0.1');
+    $username = env('DB_USERNAME', 'root');
+    $password = env('DB_PASSWORD', '');
+    $database = env('DB_DATABASE', 'ecclesia');
+
+}
 
 return [
 
@@ -59,21 +69,6 @@ return [
             'prefix' => '',
         ],
 
-//        'mysql' => [
-//            'driver' => 'mysql',
-//            'host' => env('DB_HOST', 'localhost'),
-//            'port' => env('DB_PORT', '3306'),
-//            'database' => env('DB_DATABASE', 'ecclesia'),
-//            'username' => env('DB_USERNAME', 'root'),
-//            'password' => env('DB_PASSWORD', 'root'),
-//            'charset' => 'utf8',
-//            'collation' => 'utf8_unicode_ci',
-//            'prefix' => '',
-//            'strict' => false,
-//            'engine' => null,
-//        ],
-
-        // live configuration
       'mysql' => [
             'driver'    => 'mysql',
             'host'      => $host,

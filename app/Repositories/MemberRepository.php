@@ -27,8 +27,6 @@ class MemberRepository
 
     public function saveNew(array $member)
     {
-        
-        
         $this->member->first_name = $member['firstName'];
         $this->member->last_name = $member['lastName'];
         $this->member->email = $member['email'];
@@ -39,6 +37,7 @@ class MemberRepository
         $this->member->date_joined = $member['dateJoined'];
         $this->member->mobile_number = $member['mobileNumber'];
         $this->member->occupation = $member['occupation'];
+        $this->member->gender = $member['gender'];
         
         $this->member->save();
         
