@@ -123,8 +123,6 @@
 
 
 @section('scripts')
-
-
     <script src="{{url('assets/plugins/jquery-mockjax-master/jquery.mockjax.js')}}"></script>
     <script src="{{url('assets/plugins/moment/moment.js')}}"></script>
     <script src="{{url('assets/plugins/datatables/js/jquery.datatables.min.js')}}"></script>

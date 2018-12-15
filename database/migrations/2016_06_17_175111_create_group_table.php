@@ -14,8 +14,6 @@ class CreateGroupTable extends Migration
     {
         // Add columns to groups
         Schema::table('groups', function(Blueprint $table){
-            $table->integer('church_id')->unsigned();
-            $table->integer('hod')->unsigned();
             $table->foreign('church_id')->references('id')->on('churches')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('hod')->references('id')->on('members')->onUpdate('cascade')->onDelete('cascade');
         });

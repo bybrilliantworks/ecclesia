@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLeadersTable extends Migration
+class CreateLgasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateLeadersTable extends Migration
      */
     public function up()
     {
-        // Create leaders table
-        Schema::create('leaders', function(Blueprint $table){
+        Schema::create('local_government_areas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('member_id')->unsigned();
-            $table->integer('group_id')->unsigned();
-            $table->date('appointed_on');
+            $table->integer('state_id')->unsigned();
+            $table->foreign('state_id')->references('id')->on('states')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -29,7 +28,7 @@ class CreateLeadersTable extends Migration
      */
     public function down()
     {
-        // Drop leaders table
-        Schema::drop('leaders');
+        //
+        Schema::drop('local_government_areas');
     }
 }
