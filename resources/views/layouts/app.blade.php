@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ecclesia</title>
+    <title>Ecclesia - @yield('title')</title>
 
     <link href="{{url("assets/plugins/pace-master/themes/blue/pace-theme-flash.css")}}" rel="stylesheet"/>
     <link href="{{url("assets/plugins/uniform/css/uniform.default.min.css")}}" rel="stylesheet"/>
@@ -191,6 +191,7 @@
     @include('partials.sidebar')
 
     @yield('content')
+    
     </main><!-- Page Content -->
 
     @include('partials.cd-nav')

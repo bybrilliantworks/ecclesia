@@ -19,7 +19,7 @@
             <h3>Members</h3>
             <div class="page-breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="active">Overview</li>
+                    <li class="active">All Memebers</li>
                 </ol>
             </div>
         </div>
@@ -79,7 +79,7 @@
                                         </td>
                                         <td>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-xs btn-default">View</button>
+                                                <a href="{{url('members/' . $member->id)}}" class="btn btn-xs btn-default">View</a>
                                                 <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <span class="caret"></span>
                                                     <span class="sr-only">Toggle Dropdown</span>
@@ -101,7 +101,9 @@
                 </div>
             </div><!-- Row -->
         </div><!-- Main Wrapper -->
-
+        <div class="page-footer">
+            <p class="no-s">2015 © Made by Enthronement Tech.</p>
+        </div>
     </div>
 
 @endsection

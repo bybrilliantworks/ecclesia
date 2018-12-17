@@ -24,4 +24,14 @@ class Group extends Model
     {
         return Validator::make($data, $this->rules);
     }
+
+    public function primarayMembers()
+    {
+        $this->hasMany('App\Member', 'primary_department_id');
+    }
+
+    public function secondaryMembers()
+    {
+        $this->hasMany('App\Member', 'secondary_department_id');
+    }
 }

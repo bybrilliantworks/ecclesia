@@ -29,21 +29,30 @@ class MemberController extends Controller
         return view('members.index')->with(['members' => $members]);
 
     }
+
+    public function show($id)
+    {
+        $member = $this->memberRepository->getMember($id);
+        return view('members.view')->with(['member' => $member]);
+    }
     
     public function create()
     {
         return view('members.create');
     }
+
+    public function edit(int $id)
+    {
+        $member = $this->memberRepository->getMember($id);
+        return view('members.edit')->with(['member' => $member]);
+    }
     
     
     public function store(Request $request)
     {
-
         $validator = $this->member->validate($request->all());
 
-        if ($validator->fails())
-        {
-
+        if ($validator->fails()){
             return back()->withErrors($validator)->withInput();
         }
 

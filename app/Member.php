@@ -39,5 +39,15 @@ class Member extends Model
         static::addGlobalScope(new ChurchScope);
     }
 
+    public function primaryDepartment()
+    {
+        $this->belongsTo('App\Group', 'primary_department_id');
+    }
+
+    public function secondaryDepartment()
+    {
+        $this->belongsTo('App\Group', 'secondary_department_id');
+    }
+
 
 }

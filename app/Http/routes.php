@@ -22,11 +22,13 @@ Route::auth();
 Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/dashboard', 'HomeController@index');
-    
+
     Route::get('/members', 'MemberController@index');
     Route::get('/members/create', 'MemberController@create');
     Route::post('/members', 'MemberController@store');
     Route::get('/members/{id}', 'MemberController@show');
+    Route::get('/members/{id}/edit', 'MemberController@edit');
+    Route::put('/members/{id}', 'MemberController@update');
 
     Route::get('/projects', 'ProjectController@index');
     Route::get('/projects/create', 'ProjectController@create');

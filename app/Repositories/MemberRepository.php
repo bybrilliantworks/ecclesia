@@ -42,11 +42,22 @@ class MemberRepository
         $this->member->save();
         
         return $this->member;
-        
     }
 
+    public function getMember(int $id)
+    {
+        $member = $this->member->find($id);
+        return $member;
+    }
 
+    public function updateMember(array $data, int $id)
+    {
+        $member = $this->member->find($id);
 
+        if ($member) {
+            $member->update($data)->where('id', $id);
+        }
+    }
 
 
 
