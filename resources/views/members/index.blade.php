@@ -31,6 +31,10 @@
                             <h4 class="panel-title">All members</h4>
                         </div>
                         <div class="panel-body">
+                                @include('partials.errors')
+                                @include('partials.failure')
+                                @include('partials.success')
+                                @include('partials.info')
 
                             <div class="table-responsive">
                                 <table id="membersTable" class="display table" style="width: 100%; cellspacing: 0;">
@@ -70,10 +74,10 @@
                                         <td>{{$member->marital_status}}</td>
 
                                         <td>
-                                            @if($member->status == '')
+                                            @if($member->certified_code == '')
                                                 <span class="badge badge-danger">Not Certified</span>
                                             @else
-                                                <span class="badge badge-success">Certified</span>
+                                                <span class="badge badge-success">Certified {{ $member->certified_code }}</span>
                                             @endif
 
                                         </td>

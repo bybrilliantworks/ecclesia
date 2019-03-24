@@ -32,7 +32,7 @@
                             @include('partials.failure')
                             @include('partials.success')
                             @include('partials.info')
-                            <form class="form form-horizontal" role="form" action="{{url('/members')}}" method="post">
+                            <form class="form form-horizontal" role="form" action="{{url('/members/' . $member->id )}}" method="post">
                                 {!! csrf_field() !!}
                                 <div class="form-group">
                                     <label for="firstName" class="control-label col-sm-2">First Name</label>
@@ -61,33 +61,33 @@
                                 <div class="form-group">
                                     <label for="address" class="control-label col-sm-2">Birthday</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="address" name="birthday" value="{{old('birthday')}}" placeholder="Birthday" required>
+                                        <input type="date" class="form-control" id="address" name="birthday" value="{{ $member->birthday }}" placeholder="Birthday" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="mobileNumber" class="control-label col-sm-2">Mobile Number</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" value="{{old('mobileNumber')}}" placeholder="Mobile Number" required>
+                                        <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" value="{{ $member->mobile_number }}" placeholder="Mobile Number" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="maritalStatus" class="control-label col-sm-2">Marital Status</label>
                                     <div class="col-sm-10">
-                                        <select name="maritalStatus" id="maritalStatus" class="form-control" required>
+                                        <select name="maritalStatus" id="maritalStatus" class="form-control" value="{{ $member->marital_status }}" required>
                                             <option value="">Select marital status</option>
-                                            <option value="single">Single</option>
-                                            <option value="married">Married</option>
-                                            <option value="others">Others</option>
+                                            <option value="single" {{ ($member->marital_status == 'single' ? "selected":"") }}>Single</option>
+                                            <option value="married" {{ ($member->marital_status == 'married' ? "selected":"") }}>Married</option>
+                                            <option value="others" {{ ($member->marital_status == 'others' ? "selected":"") }}>Others</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender" class="control-label col-sm-2">Gender</label>
                                     <div class="col-sm-10">
-                                        <select name="gender" id="gender" class="form-control" required>
-                                            <option value="">Select gender</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
+                                        <select name="gender" id="gender" class="form-control" value="{{ $member->gender }}" required>
+                                            <option value="" >Select gender</option>
+                                            <option value="male" {{ ($member->gender == 'male' ? "selected":"") }}>Male</option>
+                                            <option value="female" {{ ($member->gender == 'female' ? "selected":"") }}>Female</option>
                                         </select>
                                     </div>
                                 </div>
@@ -95,14 +95,20 @@
                                 <div class="form-group">
                                     <label for="occupation" class="control-label col-sm-2">Occupation</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="occupation" id="occupation" class="form-control" value="{{old('occupation')}}" placeholder="Occupation" required>
+                                        <input type="text" name="occupation" id="occupation" class="form-control" value="{{ $member->occupation }}" placeholder="Occupation" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="dateJoined" class="control-label col-sm-2">Date Joined</label>
                                     <div class="col-sm-10">
-                                        <input type="date" name="dateJoined" class="form-control" placeholder="Date joined" value="{{old('dateJoined')}}" required>
+                                        <input type="date" name="dateJoined" class="form-control" placeholder="Date joined" value="{{ $member->date_joined }}" required>
+                                    </div>
+                                </div>
 
+                                <div class="form-group">
+                                    <label for="certifiedCode" class="control-label col-sm-2">Certified Membership Number</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="certifiedCode" class="form-control" placeholder="Certified Membership number" value="{{ $member->certified_code }}">
                                     </div>
                                 </div>
                                 <div class="form-actions pull-right">

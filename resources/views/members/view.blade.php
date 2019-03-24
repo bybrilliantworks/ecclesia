@@ -45,6 +45,7 @@
                   <li><p><i class="fa fa-calendar m-r-xs"></i><a href="#">{{ $member->birthday }}</a></p></li>
               </ul>
               <hr>
+              <a href="{{url('/members/' . $member->id . '/edit')}}" class="btn btn-secondary btn-block"><i class="fa fa-pencil m-r-xs"></i>Edit</a>
               <button class="btn btn-primary btn-block"><i class="fa fa-plus m-r-xs"></i>Follow up</button>
           </div>
           <div class="col-md-6 m-t-lg">

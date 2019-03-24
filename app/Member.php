@@ -11,20 +11,26 @@ class Member extends Model
 {
     //
     use SoftDeletes;
-    
+
     protected $dates = ['deleted_at'];
 
-    private $rules = [
-        'firstName' => 'required|string|',
-        'lastName' => 'required|string',
-        'email' => 'required|email|unique:members,email',
-        'address' => 'required|string',
-        'birthday' => 'required|date',
-        'maritalStatus' => 'required|string',
-        'gender' => 'required|string',
-        'dateJoined' => 'required|date',
-        'mobileNumber' => 'required|string',
-        'occupation' => 'required|string'
+    protected $fillable = [
+        'first_name',
+        'church_id',
+        'middlename',
+        'last_name',
+        'email',
+        'mobile_number',
+        'gender',
+        'marital_status',
+        'age_group',
+        'occupation',
+        'certified_code',
+        'employment_status',
+        'organisation',
+        'wedding_anniversary',
+        'greatest_contribution',
+        'office_address',
     ];
 
     public function validate(array $members)
@@ -48,6 +54,5 @@ class Member extends Model
     {
         $this->belongsTo('App\Group', 'secondary_department_id');
     }
-
 
 }

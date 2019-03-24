@@ -2,40 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\Member;
-use Illuminate\Http\Request;
-use App\Repositories\MemberRepository;
-
+use App\Http\Requests\StoreMemberRequest;
+use App\Http\Requests\UpdateMemberRequest;
+use App\Services\Member\MemberServiceInterface as MemberService;
 
 class MemberController extends Controller
 {
-    //
-    private $memberRepository;
-    private $member;
+    private $memberService;
 
-    public function __construct(MemberRepository $memberRepository)
+    public function __construct(MemberService $memberService)
     {
         $this->middleware('auth');
-        $this->memberRepository = $memberRepository;
-        $this->member = new Member();
-    
+        $this->memberService = $memberService;
     }
 
     public function index()
     {
-        $members = $this->memberRepository->fetchAll();
+        $members = $this->memberService->fetchAll();
 
         return view('members.index')->with(['members' => $members]);
-
     }
 
-    public function show($id)
+    public function show(int $id)
     {
-        $member = $this->memberRepository->getMember($id);
+        $member = $this->memberService->getMember($id);
         return view('members.view')->with(['member' => $member]);
     }
-    
+
     public function create()
     {
         return view('members.create');
@@ -43,22 +36,23 @@ class MemberController extends Controller
 
     public function edit(int $id)
     {
-        $member = $this->memberRepository->getMember($id);
+        $member = $this->memberService->getMember($id);
+
         return view('members.edit')->with(['member' => $member]);
     }
-    
-    
-    public function store(Request $request)
+
+    public function store(StoreMemberRequest $request)
     {
-        $validator = $this->member->validate($request->all());
+        $member = $this->memberService->createMember($request->all());
 
-        if ($validator->fails()){
-            return back()->withErrors($validator)->withInput();
-        }
+        return redirect('members')->with('info', "Member has been created");
+    }
 
-        $this->memberRepository->saveNew($request->all());
+    public function update(UpdateMemberRequest $request, int $id)
+    {
+        $member = $this->memberService->updateMember($request->all(), $id);
 
-        return redirect('members')->with('success', "Member has been created");
+        return \redirect('members')->with('success', 'Member has been updated');
     }
 
 }
