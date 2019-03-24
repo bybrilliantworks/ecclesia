@@ -2,24 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Group;
-use App\Repositories\GroupRepository;
+use App\Repositories\Group\GroupRepositoryInterface as GroupRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Group;
 
 class GroupController extends Controller
 {
-    //
-
     private $groupRepository;
-
     private $group;
 
     public function __construct(GroupRepository $groupRepository)
     {
         $this->groupRepository = $groupRepository;
-        $this->group = new Group();
+        $this->group = new Group;
     }
 
     public function index()
@@ -39,12 +36,11 @@ class GroupController extends Controller
     {
         $validator = $this->group->validate($request->all());
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
 
-        $this->groupRepository->saveNew($request->all());
+        $this->groupRepository->create($request->all());
 
         return redirect('groups')->with('success', "Group has been successfully created");
     }

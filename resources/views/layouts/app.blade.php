@@ -159,6 +159,7 @@
                                     <li role="presentation"><a href="{{url('projects/create')}}"><i class="fa fa-cubes"></i>Project</a></li>
                                     <li role="presentation"><a href="{{url('groups/create')}}"><i class="fa fa-group"></i>Group</a></li>
                                     <li role="presentation"><a href="{{url('assets/create')}}"><i class="fa fa-cogs"></i>Asset</a></li>
+                                    <li role="presentation"><a href="{{url('users/create')}}"><i class="fa fa-user-md"></i>User</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

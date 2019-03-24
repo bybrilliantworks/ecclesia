@@ -6,22 +6,23 @@
  * Time: 6:47 PM
  */
 
-namespace App\Repositories;
+namespace App\Repositories\Group;
 
 
 use App\Group;
+use App\Repositories\Group\GroupRepositoryInterface;
 
-class GroupRepository
+class GroupRepository implements GroupRepositoryInterface
 {
 
     private $group;
 
-    public function __construct()
+    public function __construct(Group $group)
     {
-        $this->group = new Group();
+        $this->group = $group;
     }
 
-    public function saveNew($group)
+    public function create(array $group)
     {
         $this->group->name = $group['name'];
         $this->group->church_id = auth()->user()->church_id;

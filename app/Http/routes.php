@@ -56,6 +56,11 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/events/attendance/check_in', 'EventController@checkIn');
     Route::get('/events/attendance/remove_checkin', 'EventController@undoCheckIn');
     Route::resource('/event_types', 'EventTypeController');
+
+    Route::get('/users', 'UserController@index');
+    Route::post('/users', 'UserController@store');
+    Route::put('users/{id}', 'UserController@update');
+    Route::get('users/create', 'UserController@create');
     
 });
 
