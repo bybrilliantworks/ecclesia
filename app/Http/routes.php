@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/members', 'MemberController@store');
     Route::get('/members/{id}', 'MemberController@show');
     Route::get('/members/{id}/edit', 'MemberController@edit');
-    Route::put('/members/{id}', 'MemberController@update');
+    Route::post('/members/{id}', 'MemberController@update');
 
     Route::get('/projects', 'ProjectController@index');
     Route::get('/projects/create', 'ProjectController@create');

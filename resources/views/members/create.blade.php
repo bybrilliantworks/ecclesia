@@ -15,7 +15,7 @@
             <h3>Members</h3>
             <div class="page-breadcrumb">
                 <ol class="breadcrumb">
-                    <li>Members</li>
+                    <li><a href="{{url('/members')}}">Members</a></li>
                     <li class="active">Create new</li>
                 </ol>
             </div>
@@ -103,6 +103,12 @@
                                     <div class="col-sm-10">
                                         <input type="date" name="dateJoined" class="form-control" placeholder="Date joined" value="{{old('dateJoined')}}" required>
 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="certifiedCode" class="control-label col-sm-2">Certified Membership Number</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="certifiedCode" class="form-control" placeholder="Certified Membership number" value="{{ $member->certified_code }}">
                                     </div>
                                 </div>
                                 <div class="form-actions pull-right">

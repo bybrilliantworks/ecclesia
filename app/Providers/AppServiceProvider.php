@@ -29,6 +29,16 @@ class AppServiceProvider extends ServiceProvider
             'App\Repositories\Group\GroupRepository'
         );
 
+        $this->app->bind(
+            'App\Repositories\User\UserRepositoryInterface',
+            'App\Repositories\User\UserRepository'
+        );
+
+        $this->app->bind(
+            'App\Repositories\Member\MemberRepositoryInterface',
+            'App\Repositories\Member\MemberRepository'
+        );
+
         // Services
         $this->app->bind(
             'App\Services\User\UserServiceInterface',
@@ -36,8 +46,9 @@ class AppServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
-            'App\Repositories\User\UserRepositoryInterface',
-            'App\Repositories\User\UserRepository'
+            'App\Services\Member\MemberServiceInterface',
+            'App\Services\Member\MemberService'
         );
+
     }
 }
