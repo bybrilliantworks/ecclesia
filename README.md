@@ -7,6 +7,8 @@ Ecclesia is an open source church information system built with Laravel
 - Create an env file by running `touch .env`
 - Copy the contents of the `.env.sample` into `.env`
 - Set the values of the environment variables
+- Run `php artisan db:seed --class=ChurchTableSeeder`
+- Run `php artisan db:seed --class=UsersTableSeeder`
 - Run `php artisan serve`
 
 

@@ -393,7 +393,7 @@
             </div>
         </div><!-- Main Wrapper -->
         <div class="page-footer">
-            <p class="no-s">2015 &copy; Modern by Steelcoders.</p>
+            <p class="no-s">2019 &copy; Made by EHCC Tech.</p>
         </div>
     </div><!-- Page Inner -->
 

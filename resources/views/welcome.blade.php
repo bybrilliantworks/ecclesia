@@ -66,7 +66,7 @@
 
 <footer>
     <div class="container">
-        <p class="text-center no-s">2015 &copy; Powered by Ecclesia.</p>
+        <p class="text-center no-s">2019 &copy; Made by EHCC Tech.</p>
     </div>
 </footer>
 
